@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de 6 números</title>
+</head>
+<body>
+    <script>
+        //Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.  
+
+        let soma = 0;
+
+        let numerosInformados = [];
+
+        for (let i = 0; i < 6; i++) {
+
+            let numero = parseFloat(prompt("Digite um número: "));
+            numerosInformados.push(numero);
+            if (numero < 72) {
+                soma += numero;
+            }else{
+                alert("Números inválidos");
+            }
+        }
+        alert("A soma dos números inferiores a 72 é: " + soma);
+        alert("Todos os números informados: " + numerosInformados.join(', '));
+
+    </script>
+</body>
+</html>

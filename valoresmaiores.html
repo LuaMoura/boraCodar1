@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores Maiores</title>
+</head>
+<body>
+    <script>
+        //Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles. 
+        function numerosDiferentes(num1, num2, num3) {
+            return num1 !== num2 && num1 !== num3 && num2 !== num3;
+        }
+        function maiorNumero(num1, num2, num3) {
+            if (num1 > num2 && num1 > num3) {
+                return num1;
+            } else if (num2 > num1 && num2 > num3) {
+                return num2;
+            } else {
+                return num3;
+            }
+        }
+        function encontrarMaiorNumero() {
+            let num1 = parseFloat(prompt("Digite o primeiro número:"));
+            let num2 = parseFloat(prompt("Digite o segundo número:"));
+            let num3 = parseFloat(prompt("Digite o terceiro número:"));
+            if (numerosDiferentes(num1, num2, num3)) {
+                let maior = maiorNumero(num1, num2, num3);
+                alert("O maior número é: " + maior);
+            } else {
+                alert("Os números devem ser diferentes. Por favor, tente novamente.");
+                encontrarMaiorNumero();
+            }
+        }
+        encontrarMaiorNumero();
+
+    </script>
+</body>
+</html>

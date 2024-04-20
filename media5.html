@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média 5</title>
+</head>
+<body>
+    <script>
+        //Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente" 
+
+        function intervalo(numero) {
+            return numero > 0 && numero < 10;
+        }
+
+        function calcularMedia(numero1, numero2, numero3, numero4) {
+            if (intervalo(numero1) && intervalo(numero2) && intervalo(numero3) && intervalo(numero4)) {
+                let media = (numero1 + numero2 + numero3 + numero4) / 4;
+                return media;
+            } else {
+                alert("Número inválido")
+                return null;
+            }
+        }
+
+        let num1 = parseFloat(prompt("Digite o primeiro número: "));
+        let num2 = parseFloat(prompt("Digite o segundo número: "));
+        let num3 = parseFloat(prompt("Digite o terceiro número: "));
+        let num4 = parseFloat(prompt("Digite o quarto número: "));
+
+        let media = calcularMedia(num1, num2, num3, num4);
+
+
+        if (media !== null) {
+            alert("A média dos números informados é: " + media.toFixed(2));
+            if (media < 5) {
+                alert("Tente novamente");
+            }else{
+                alert("Você passou no teste")
+            }
+        } else {
+            alert("Pelo menos um dos números está fora do intervalo [0, 10).");
+        }
+
+
+    </script>
+</body>
+</html>

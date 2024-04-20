@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores Maiores</title>
+</head>
+<body>
+    <script>
+        //Faça um programa que leia dois valores informados pelo usuário e exiba uma das três mensagens a seguir: ‘Números iguais’, caso os números sejam iguais ‘Primeiro é maior’, caso o primeiro seja maior que o segundo; ‘Segundo maior’, caso o segundo seja maior que o primeiro.
+        function lerNumero(mensagem) {
+            return parseFloat(prompt(mensagem));
+        }
+
+        function compararNumeros() {
+            let numero1 = lerNumero("Digite o primeiro número:");
+            let numero2 = lerNumero("Digite o segundo número:");
+
+            if (numero1 === numero2) {
+                alert("Números iguais");
+            } else if (numero1 > numero2) {
+                alert("Primeiro é maior");
+            } else {
+                alert("Segundo é maior");
+            }
+        }
+        compararNumeros();
+
+    </script>
+</body>

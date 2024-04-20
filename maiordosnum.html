@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior dos números</title>
+</head>
+<body>
+    <script>
+        //Escreva um programa em que o usuário informe dois números utilizando o "prompt". Então escreva em tela o maior deles. 
+        let numero1 = prompt("Insira o primeiro número:");
+        let numero2 = prompt("Insira o segundo número:");
+
+        numero1 = parseInt(numero1);
+        numero2 = parseInt(numero2);
+
+        if (numero1 > numero2) {
+            alert("O maior número é: " + numero1);
+        } else if (numero2 > numero1) {
+            alert("O maior número é: " + numero2);
+        } else {
+            alert("Os números são iguais.");
+        }
+    </script>
+</body>
+</html>

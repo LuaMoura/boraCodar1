@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <script>
+        //Faça um programa que leia 10 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
+        function lerNumero(mensagem) {
+            return parseFloat(prompt(mensagem));
+        }
+
+        function calcularMedia(numeros) {
+            let total = 0;
+            for (let i = 0; i < numeros.length; i++) {
+                total += numeros[i];
+            }
+            return total / numeros.length;
+        }
+
+        function calcularMediaDezNumeros() {
+            let numeros = [];
+            for (let i = 0; i < 10; i++) {
+                let numero = lerNumero("Digite o " + (i + 1) + "º número:");
+                numeros.push(numero);
+            }
+
+            alert("Números informados:");
+            alert(numeros);
+
+            let media = calcularMedia(numeros);
+            alert("Média aritmética dos números: " + media);
+        }
+        calcularMediaDezNumeros();
+
+    </script>
+</body>
+</html>
